@@ -73,5 +73,24 @@
             {{-- chiusura nav --}}
         </header>
         {{-- chiusura header --}}
+
+        {{-- apertur footer --}}
+        <footer>
+
+            {{-- apertura footer top --}}
+            <div class="footer-top">
+                <div class="container">
+                    <ul class="d-flex">
+                        <li><a href="#">DIGITAL COMICS</a></li>
+                        <li><a href="#">DC MERCHANDISE</a></li>
+                        <li><a href="#">PRINT SUBSCRIPTION</a></li>
+                        <li><a href="#">COMIC SHOP LOCATOR</a></li>
+                    </ul>
+                </div>
+            </div>
+            {{-- chiusura footer top --}}
+
+        </footer>
+        {{-- chiusura footer --}}
     </body>
 </html>

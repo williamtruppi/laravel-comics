@@ -11011,3 +11011,22 @@ nav .navbar_bottom .container .navbar_bottom_right {
   align-items: center;
 }
 
+/* FOOTER */
+
+footer .footer-top {
+  background-color: #0282F9;
+  padding: 30px 0;
+}
+
+footer .footer-top ul {
+  list-style: none;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+footer .footer-top ul a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+

@@ -5,11 +5,11 @@
         {{-- apertura navbar_top --}}
         <div class="navbar_top d-flex">
             <ul class="d-flex">
-                <li><a href="#">DC</a></li>
-                <li><a href="#">DC UNIVERSE</a></li>
-                <li><a href="#">DC SHOP</a></li>
-                <li><a href="#">DC COMMUNITY</a></li>
-                <li><a href="#">DC ON HBO MAX</a></li>
+                <li><a href="#" id="dc-navbar"><img src="{{asset('img/dc_desktop_blue.svg')}}" alt=""> </a></li>
+                <li><a href="#"><img src="{{asset('img/DCUI_desktop.svg')}}" alt=""></a></li>
+                <li><a href="#"><img src="{{asset('img/DC_SHOP_desktop.svg')}}" alt=""></a></li>
+                <li><a href="#"><img src="{{asset('img/DC_community.svg')}}" alt=""></a></li>
+                <li><a href="#"><img src="{{asset('img/DC_on_HBOMAX_desktop.svg')}}" alt=""></a></li>
             </ul>
         </div>
         {{-- apertura navbar_top --}}

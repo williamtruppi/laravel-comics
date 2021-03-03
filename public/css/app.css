@@ -10950,6 +10950,11 @@ a.text-dark:focus {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+.container {
+  padding: 0;
 }
 
 .d-flex {
@@ -10968,6 +10973,14 @@ nav .navbar_top {
 nav .navbar_top ul {
   list-style: none;
   margin-bottom: 0;
+}
+
+nav .navbar_top ul li {
+  height: 100%;
+}
+
+nav .navbar_top ul li > #dc-navbar {
+  background-color: white;
 }
 
 nav .navbar_top ul a {
@@ -11001,6 +11014,8 @@ nav .navbar_bottom .container .navbar_bottom_center ul {
 }
 
 nav .navbar_bottom .container .navbar_bottom_center ul a {
+  color: black;
+  font-weight: 700;
   text-decoration: none;
   padding: 0 15px;
 }
@@ -11024,7 +11039,17 @@ footer .footer-top ul {
   justify-content: center;
 }
 
+footer .footer-top ul li {
+  margin: 0 35px;
+}
+
+footer .footer-top ul img {
+  height: 50px;
+}
+
 footer .footer-top ul a {
+  min-height: 100%;
+  font-size: 0.7rem;
   color: white;
   text-decoration: none;
   padding: 0 15px;
@@ -11062,6 +11087,16 @@ footer .footer-bottom .container {
   align-items: center;
 }
 
+footer .footer-bottom .container #sign_up {
+  padding: 10px 20px;
+  color: white;
+  border: 2px solid #0282F9;
+}
+
+footer .footer-bottom .container #sign_up:hover {
+  background-color: #0282F9;
+}
+
 footer .footer-bottom .container a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -11070,6 +11105,13 @@ footer .footer-bottom .container a {
 
 footer .footer-bottom .container .follow-footer {
   align-items: center;
+}
+
+footer .footer-bottom .container .follow-footer a {
+  text-decoration: none;
+  color: #0282F9;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 footer .footer-bottom .container .follow-footer i {

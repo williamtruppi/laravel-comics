@@ -6,6 +6,10 @@
 
         <title>DC Comics | Homepage</title>
 
+        {{-- google fonts --}}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
         {{-- link CSS --}}
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
 

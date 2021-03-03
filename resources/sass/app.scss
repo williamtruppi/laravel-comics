@@ -14,6 +14,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.container{
+    padding: 0;
 }
 
 .d-flex{
@@ -32,7 +37,15 @@ nav{
         ul{
             list-style: none;
             margin-bottom: 0;
-        
+
+            li{
+                height: 100%;
+            }
+
+            li > #dc-navbar{
+                background-color: white;
+            }
+            
             a{
                 text-decoration: none;
                 color: white;
@@ -44,6 +57,7 @@ nav{
 
     .navbar_bottom{
         padding: 20px 0;
+
         .container{
 
             .navbar_bottom_left{
@@ -63,6 +77,8 @@ nav{
                     margin-bottom: 0;
                 
                     a{
+                        color: black;
+                        font-weight: 700;
                         text-decoration: none;
                         padding: 0 15px;
                     }
@@ -89,8 +105,18 @@ footer{
             list-style: none;
             margin-bottom: 0;
             justify-content: center;
+
+            li{
+                margin: 0 35px;
+            }
+            
+            img{
+                height: 50px;
+            }
         
             a{
+                min-height: 100%;
+                font-size: 0.7rem;
                 color: white;
                 text-decoration: none;
                 padding: 0 15px;
@@ -129,12 +155,29 @@ footer{
             justify-content: space-between;
             align-items: center;
 
+            #sign_up{
+                padding: 10px 20px;
+                color: white;
+                border: 2px solid $DCBlue;
+
+                &:hover{
+                    background-color: $DCBlue;
+                }
+            }
+
             a{
                 height: fit-content;
             }
 
             .follow-footer{                
                 align-items: center;
+
+                a{
+                    text-decoration: none;
+                    color: $DCBlue;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
 
                 i{
                     padding: 6px;

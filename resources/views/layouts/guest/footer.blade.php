@@ -5,10 +5,10 @@
             <div class="footer-top">
                 <div class="container">
                     <ul class="d-flex">
-                        <li><a href="#">DIGITAL COMICS</a></li>
-                        <li><a href="#">DC MERCHANDISE</a></li>
-                        <li><a href="#">PRINT SUBSCRIPTION</a></li>
-                        <li><a href="#">COMIC SHOP LOCATOR</a></li>
+                        <li><a href="#"><img src="{{asset('img/DCUI.svg')}}" alt=""> DIGITAL COMICS</a></li>
+                        <li><a href="#"><img src="{{asset('img/DCshop.svg')}}" alt=""> DC MERCHANDISE</a></li>
+                        <li><a href="#"><img src="{{asset('img/subscription.svg')}}" alt=""> PRINT SUBSCRIPTION</a></li>
+                        <li><a href="#"><img src="{{asset('img/locator.svg')}}" alt=""> COMIC SHOP LOCATOR</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +58,7 @@
             {{-- apertura footer-bottom --}}
             <div class="footer-bottom">
                 <div class="container d-flex">
-                    <a href="#">SIGN UP NOW</a>
+                    <a href="#" id="sign_up">SIGN-UP NOW!</a>
                     <div class="follow-footer d-flex">
                         <a href="#">FOLLOW US</a>
                         <i class="fab fa-facebook-f d-flex"></i>

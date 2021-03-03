@@ -6,3 +6,39 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+/* classi utility */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/* navbar */
+
+nav{
+    .navbar_top{
+        background-color: $DCBlue;
+        padding: 5px 0;
+        justify-content: flex-end;
+        align-items: center;
+
+        ul{
+            list-style: none;
+            margin-bottom: 0;
+        
+            a{
+                text-decoration: none;
+                color: white;
+                margin-left: 5px;
+                padding: 0 10px;
+            }
+        }
+    }
+}

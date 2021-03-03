@@ -10974,6 +10974,40 @@ nav .navbar_top ul a {
   text-decoration: none;
   color: white;
   margin-left: 5px;
-  padding: 0 10px;
+  padding: 0 30px;
+}
+
+nav .navbar_bottom {
+  padding: 20px 0;
+}
+
+nav .navbar_bottom .container .navbar_bottom_left {
+  min-width: 10%;
+}
+
+nav .navbar_bottom .container .navbar_bottom_left img {
+  height: 70px;
+}
+
+nav .navbar_bottom .container .navbar_bottom_center {
+  min-width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .navbar_bottom .container .navbar_bottom_center ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+nav .navbar_bottom .container .navbar_bottom_center ul a {
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+nav .navbar_bottom .container .navbar_bottom_right {
+  min-width: 20%;
+  justify-content: flex-end;
+  align-items: center;
 }
 

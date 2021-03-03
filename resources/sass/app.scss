@@ -37,7 +37,42 @@ nav{
                 text-decoration: none;
                 color: white;
                 margin-left: 5px;
-                padding: 0 10px;
+                padding: 0 30px;
+            }
+        }
+    }
+
+    .navbar_bottom{
+        padding: 20px 0;
+        .container{
+
+            .navbar_bottom_left{
+                min-width: 10%;
+                img{
+                    height: 70px;
+                }
+            }
+
+            .navbar_bottom_center{
+                min-width: 70%;
+                justify-content: center;
+                align-items: center;
+
+                ul{
+                    list-style: none;
+                    margin-bottom: 0;
+                
+                    a{
+                        text-decoration: none;
+                        padding: 0 15px;
+                    }
+                }
+            }
+
+            .navbar_bottom_right{
+                min-width: 20%;
+                justify-content: flex-end;
+                align-items: center;
             }
         }
     }

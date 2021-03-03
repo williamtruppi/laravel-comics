@@ -80,6 +80,7 @@ nav{
 
 /* FOOTER */
 footer{
+
     .footer-top{
         background-color: $DCBlue;
         padding: 30px 0;
@@ -95,5 +96,56 @@ footer{
                 padding: 0 15px;
             }
         }
+    }
+
+    .footer-center{
+        max-height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .container{
+            padding: 10px 0;
+
+            .footer-center-left{
+                width: 50%;
+            }
+            .footer-center-right{
+                width: 50%;
+                background-position: center;
+                background-position: right;
+                background-size: 80%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        
+    }
+
+    .footer-bottom{
+        background-color: #232323;
+        padding: 20px 0;
+
+        .container{
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+                height: fit-content;
+            }
+
+            .follow-footer{                
+                align-items: center;
+
+                i{
+                    padding: 6px;
+                    font-size: 1.5rem;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: grey;
+                    margin: 0 5px;
+                }
+            }
+        }
+
     }
 }

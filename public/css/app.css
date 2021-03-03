@@ -11030,3 +11030,54 @@ footer .footer-top ul a {
   padding: 0 15px;
 }
 
+footer .footer-center {
+  max-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer .footer-center .container {
+  padding: 10px 0;
+}
+
+footer .footer-center .container .footer-center-left {
+  width: 50%;
+}
+
+footer .footer-center .container .footer-center-right {
+  width: 50%;
+  background-position: center;
+  background-position: right;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+footer .footer-bottom {
+  background-color: #232323;
+  padding: 20px 0;
+}
+
+footer .footer-bottom .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-bottom .container a {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .footer-bottom .container .follow-footer {
+  align-items: center;
+}
+
+footer .footer-bottom .container .follow-footer i {
+  padding: 6px;
+  font-size: 1.5rem;
+  align-items: center;
+  border-radius: 50%;
+  background-color: grey;
+  margin: 0 5px;
+}
+

@@ -14,7 +14,7 @@ class AddCoverToComicsTable extends Migration
     public function up()
     {
         Schema::table('comics', function (Blueprint $table) {
-            //
+            $table->string('cover')->after('slug')->nullable();
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComicArtistTable extends Migration
+class CreateComicWriterTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateComicArtistTable extends Migration
      */
     public function up()
     {
-        Schema::create('comic_artist', function (Blueprint $table) {
+        Schema::create('comic_writer', function (Blueprint $table) {
             $table->unsignedBigInteger('comic_id');
-            $table->foreign('comic_id')->references('id')->on('comics');
-            $table->unsignedBigInteger('artist_id');
-            $table->foreign('artist_id')->references('id')->on('artists');
+            $table->unsignedBigInteger('writer_id');
+
+            $table->foreign('comic_id')->references('id')->on('comics')->onDelete('cascade');
+            $table->foreign('writer_id')->references('id')->on('writers')->onDelete('cascade');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateComicArtistTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comic_artist');
+        Schema::dropIfExists('comic_writer');
     }
 }

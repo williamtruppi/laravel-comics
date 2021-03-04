@@ -27,8 +27,9 @@
 
         {{-- AVAILABLE --}}
         <div class="form-group">
-            <label for="available">Available -- TRUE or FALSE</label>
-            <input class="form-control" type="text" name="available" id="available" value="{{old('available')}}">
+            <label for="available">Available:</label>
+            <input type="radio" class="form-control" id="available" name="available" value="1"> <span>TRUE</span> 
+            <input type="radio" class="form-control" id="available" name="available" value="0"> <span>FALSE</span> 
         </div>
         @error('available')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -89,8 +90,8 @@
         @enderror
 
         <div class="form-group">
-          <label for="image">Cover Image</label>
-          <input type="file" class="form-control-file" name="image" id="image" placeholder="" aria-describedby="fileHelpId">
+          <label for="img_cover">Cover Image</label>
+          <input type="file" class="form-control-file" name="img_cover" id="img_cover" placeholder="" aria-describedby="fileHelpId">
           <small id="fileHelpId" class="form-text text-muted">Add cover image for the current COMIC</small>
         </div>
 

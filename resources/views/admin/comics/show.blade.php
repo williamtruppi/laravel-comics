@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <img src="{{asset('storage/' . $comic->img_cover)}}" alt="">
     <h1>Title: {{$comic->title}}</h1>
     <p>Description: {{$comic->description}}</p>
 

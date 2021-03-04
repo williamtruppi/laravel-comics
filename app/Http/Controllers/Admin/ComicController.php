@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Comic;
 use App\Artist;
 use App\Writer;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -41,7 +43,42 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
+
+        $request['slug'] = Str::slug($request->title);
+
+        //dd($slug);
+
+        $validateData = $request->validate([
+            'title' => 'required|unique:comics|max:255',
+            'slug' => 'required',
+            'img_cover' => 'nullable | image ',
+            'available' => 'required',
+            'description' => 'required',
+            'price' => 'required | numeric',
+            'series' => 'required',
+            'volume' => 'required',
+            'page_count' => 'required | numeric',
+            'rated' => 'required',
+            'artists' => 'required|exists:artists,id',
+            'writers' => 'required|exists:writers,id'
+        ]);
+
+        $img_cover = Storage::put('cover_images', $request->img_cover);
+        $validateData['img_cover'] = $img_cover;
+
+        //dd($validateData);
+        
+        Comic::create($validateData);
+
+        $new_comic = Comic::orderBy("id", "desc")->first();
+       
+        $new_comic->artists()->attach($request->artists);
+        $new_comic->writers()->attach($request->writers);
+        
+        //dd($new_comic);
+
+        return redirect()->route("admin.comics.index", $new_comic);
     }
 
     /**

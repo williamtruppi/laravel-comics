@@ -10,4 +10,9 @@ class Comic extends Model
     {
         return 'slug';
     }
+
+    public function artists ()
+    {
+        return $this->belongsToMany('App\Artist');
+    }
 }

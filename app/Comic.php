@@ -15,4 +15,9 @@ class Comic extends Model
     {
         return $this->belongsToMany('App\Artist');
     }
+
+    public function writers ()
+    {
+        return $this->belongsToMany('App\Writer');
+    }
 }

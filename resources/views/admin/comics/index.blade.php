@@ -2,7 +2,7 @@
 
 @section('content')
         <h1>All Comics for the Admin</h1>
-        <a name="" id="" class="btn btn-primary" href="{{-- {{route('admin.comics.create')}} --}}" role="button">INSERT A NEW COMIC</a>
+        <a name="" id="" class="btn btn-primary" href="{{route('admin.comics.create')}}" role="button">INSERT A NEW COMIC</a>
         <table class="table">
             <thead>
                 <tr>

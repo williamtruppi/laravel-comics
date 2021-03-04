@@ -93,19 +93,20 @@
           <input type="file" class="form-control-file" name="image" id="image" placeholder="" aria-describedby="fileHelpId">
           <small id="fileHelpId" class="form-text text-muted">Add cover image for the current COMIC</small>
         </div>
-       
-        
 
-        {{-- <span>Choose a category</span>
-        <select name="category_id" id="category_id">
-            <option value="" selected disabled hidden>Choose here</option>
-            @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
-            @endforeach
-        </select>
-        @error('category_id')
+        <br>
+        <span>Choose the Writers: </span>
+        <div class="form-group">
+          <label for="writers"></label>
+          <select class="form-control" name="writers[]" id="writers" multiple>
+                @foreach ($writers as $writer)
+                    <option value="{{$writer->id}}">{{$writer->name}} {{$writer->lastname}}</option>
+                @endforeach
+          </select>
+        </div>
+        @error('writers')
             <div class="alert alert-danger">{{ $message }}</div>
-        @enderror --}}
+        @enderror
 
         <br>
         <span>Choose the Artists: </span>

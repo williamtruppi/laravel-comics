@@ -105,22 +105,22 @@
         </select>
         @error('category_id')
             <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
+        @enderror --}}
 
         <br>
-        <span>Choose tags: </span>
+        <span>Choose the Artists: </span>
         <div class="form-group">
-          <label for="tags"></label>
-          <select class="form-control" name="tags[]" id="tags" multiple>
-                @foreach ($tags as $tag)
-                    <option value="{{$tag->id}}">{{$tag->name}}</option>
+          <label for="artists"></label>
+          <select class="form-control" name="artists[]" id="artists" multiple>
+                @foreach ($artists as $artist)
+                    <option value="{{$artist->id}}">{{$artist->name}} {{$artist->lastname}}</option>
                 @endforeach
           </select>
         </div>
-        @error('tags')
+        @error('artists')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        --}}
+       
 
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>

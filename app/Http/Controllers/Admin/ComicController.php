@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Comic;
+use App\Artist;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('admin.comics.create');
+        $artists = Artist::all();
+        return view('admin.comics.create', compact('artists'));
     }
 
     /**
@@ -37,7 +39,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        /* dd($request->all()); */
+        dd($request->all());
     }
 
     /**

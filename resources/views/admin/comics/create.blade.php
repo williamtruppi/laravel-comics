@@ -13,7 +13,7 @@
     @endif
 
     <h1>INSERT COMIC</h1>
-    <form action="{{-- {{route('admin.comics.store')}} --}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('admin.comics.store')}}" method="post" enctype="multipart/form-data">
         @csrf
 
         {{-- TITLE --}}
@@ -88,12 +88,12 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        {{-- <div class="form-group">
+        <div class="form-group">
           <label for="image">Cover Image</label>
           <input type="file" class="form-control-file" name="image" id="image" placeholder="" aria-describedby="fileHelpId">
-          <small id="fileHelpId" class="form-text text-muted">Add cover image for the current post</small>
+          <small id="fileHelpId" class="form-text text-muted">Add cover image for the current COMIC</small>
         </div>
-        --}}
+       
         
 
         {{-- <span>Choose a category</span>

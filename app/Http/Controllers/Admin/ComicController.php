@@ -100,7 +100,9 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        $artists = Artist::all();
+        $writers = Writer::all();
+        return view('admin.comics.edit', compact('comic','artists', 'writers'));
     }
 
     /**

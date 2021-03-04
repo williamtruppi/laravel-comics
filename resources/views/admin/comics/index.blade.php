@@ -33,7 +33,7 @@
                     <td>{{ $comic->price }}</td>
                     <td>
                         <a href="{{route('admin.comics.show', ['comic' => $comic->slug])}}" class="btn btn-primary"><i class="fas fa-eye fa-xs fa-fw"></i></a>
-                        <a href="{{-- {{route('admin.comics.edit', ['comic' => $comic->slug])}} --}}" class="btn btn-warning"><i class="fas fa-pencil-ruler fa-xs fa-fw"></i></a>
+                        <a href="{{route('admin.comics.edit', ['comic' => $comic->slug])}}" class="btn btn-warning"><i class="fas fa-pencil-ruler fa-xs fa-fw"></i></a>
                         <!-- Modal -->
                         <!-- Button trigger modal -->
                         <a class="btn btn-danger" data-toggle="modal" data-target="#delete-{{ $comic->slug }}"

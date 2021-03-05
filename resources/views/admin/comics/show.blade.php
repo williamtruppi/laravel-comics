@@ -18,4 +18,15 @@
     <h3>Page Count: {{$comic->page_count}}</h3>
     <h3>Rated: {{$comic->rated}}</h3>
     
+    <h3> Artists:
+        @foreach ($comic->artists as $artist)
+             {{$artist->name}} {{$artist->lastname}},
+        @endforeach
+    </h3>
+    <h3> Writers:
+        @foreach ($comic->writers as $writer)
+             {{$writer->name}} {{$writer->lastname}},
+        @endforeach
+    </h3>
+    
 @endsection

@@ -52,7 +52,7 @@ class ComicController extends Controller
         $validateData = $request->validate([
             'title' => 'required|unique:comics|max:255',
             'slug' => 'required',
-            'img_cover' => 'nullable | image ',
+            'img_cover' => 'nullable',
             'available' => 'required',
             'description' => 'required',
             'price' => 'required | numeric',
@@ -114,7 +114,33 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $request['slug'] = Str::slug($request->title);
+
+        //dd($slug);
+
+        $validateData = $request->validate([
+            'title' => 'required|unique:comics,id|max:255',
+            'slug' => 'required',
+            'img_cover' => 'nullable',
+            'available' => 'required',
+            'description' => 'required',
+            'price' => 'required | numeric',
+            'series' => 'required',
+            'volume' => 'required',
+            'page_count' => 'required | numeric',
+            'rated' => 'required',
+            'artists' => 'required|exists:artists,id',
+            'writers' => 'required|exists:writers,id'
+        ]);
+
+        $img_cover = Storage::put('cover_images', $request->img_cover);
+        $validateData['img_cover'] = $img_cover;
+
+        $comic->update($validateData);
+        $comic->writers()->sync($request->writers);
+        $comic->artists()->sync($request->artists);
+
+        return redirect()->route('admin.comics.index');
     }
 
     /**

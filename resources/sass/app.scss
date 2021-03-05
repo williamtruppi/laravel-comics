@@ -73,6 +73,7 @@ nav{
             }
 
             .navbar_bottom_center{
+                font-size: 1.2rem;
                 min-width: 70%;
                 justify-content: center;
                 align-items: center;
@@ -164,9 +165,48 @@ main{
         }
 
         .single_comic_info{
-            margin-top: 70px;
+
+            .single_comic_title_price_desc{
+                margin: 70px 0;
+
+                h1{font-weight: 700;}
+
+                .price_available{
+                    margin: 40px 0;
+                    font-size: 1.3rem;
+                    width: 60%;
+                    padding: 10px 20px;
+                    background-color: #55BA59;
+                    justify-content: space-between;
+                }
+
+                p{font-size: 1.5rem;}
+            }
+
+            .single_comic_talent_spec{
+                background-color: #F6F6F6;
+                padding: 60px 0 120px 0;
+
+                .single_comic_talent, .single_comic_specs{
+                    margin-right: 20px;
+                    width: 50%;
+                    font-size: 1.1rem;
+
+                    strong{
+                        display: inline-block;
+                        min-width: 50%;
+                    }
+
+                    .spec_row{
+                        padding: 10px 0;
+                        border-top: 1px solid #ffffff;
+                        border-bottom: 1px solid #e3e3e3;
+                    }
+                    
+                    
+                }
+            }
             
-            h1{font-weight: 700;}
         }
     }
 }

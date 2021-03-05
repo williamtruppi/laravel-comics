@@ -10061,6 +10061,7 @@ nav .navbar_bottom .container .navbar_bottom_left img {
   height: 70px;
 }
 nav .navbar_bottom .container .navbar_bottom_center {
+  font-size: 1.2rem;
   min-width: 70%;
   justify-content: center;
   align-items: center;
@@ -10140,11 +10141,40 @@ main .single-product .cover_image .cover_image_footer img {
   transform: translateY(-85%);
   border: 1px solid white;
 }
-main .single-product .single_comic_info {
-  margin-top: 70px;
+main .single-product .single_comic_info .single_comic_title_price_desc {
+  margin: 70px 0;
 }
-main .single-product .single_comic_info h1 {
+main .single-product .single_comic_info .single_comic_title_price_desc h1 {
   font-weight: 700;
+}
+main .single-product .single_comic_info .single_comic_title_price_desc .price_available {
+  margin: 40px 0;
+  font-size: 1.3rem;
+  width: 60%;
+  padding: 10px 20px;
+  background-color: #55BA59;
+  justify-content: space-between;
+}
+main .single-product .single_comic_info .single_comic_title_price_desc p {
+  font-size: 1.5rem;
+}
+main .single-product .single_comic_info .single_comic_talent_spec {
+  background-color: #F6F6F6;
+  padding: 60px 0 120px 0;
+}
+main .single-product .single_comic_info .single_comic_talent_spec .single_comic_talent, main .single-product .single_comic_info .single_comic_talent_spec .single_comic_specs {
+  margin-right: 20px;
+  width: 50%;
+  font-size: 1.1rem;
+}
+main .single-product .single_comic_info .single_comic_talent_spec .single_comic_talent strong, main .single-product .single_comic_info .single_comic_talent_spec .single_comic_specs strong {
+  display: inline-block;
+  min-width: 50%;
+}
+main .single-product .single_comic_info .single_comic_talent_spec .single_comic_talent .spec_row, main .single-product .single_comic_info .single_comic_talent_spec .single_comic_specs .spec_row {
+  padding: 10px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 /* FOOTER */

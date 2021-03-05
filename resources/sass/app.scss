@@ -28,6 +28,8 @@
 /* navbar */
 
 nav{
+    border-bottom: 1px solid black;
+
     .navbar_top{
         background-color: $DCBlue;
         padding: 5px 0;
@@ -92,6 +94,45 @@ nav{
                 min-width: 20%;
                 justify-content: flex-end;
                 align-items: center;
+            }
+        }
+    }
+}
+
+main{
+    .comics-graphics{
+        margin-top: 60px;
+        padding: 70px 0;
+        background-color: #1C1C1C;
+        justify-content: center;
+        position: relative;
+
+        .comics-graphics-title{
+            position: absolute;
+            transform: translate(-90%, -165%);
+            padding: 5px;
+            color: white;
+            background-color: $DCBlue;
+
+            h1{font-weight: 700;}
+        }
+
+        .comics-card-container{
+            margin: 0 10px;
+
+            .comics-card{
+                position: relative;
+
+                .comic_type{
+                    position: absolute;
+                    padding: 3px;
+                    background-color: $DCBlue;
+                    h5{margin: 0;}
+                }
+
+                img {margin-bottom: 10px;}
+                #available_comics {color: $DCBlue;}
+                h5 {color: white}
             }
         }
     }

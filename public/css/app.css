@@ -10021,6 +10021,9 @@ h3 {
 }
 
 /* navbar */
+nav {
+  border-bottom: 1px solid black;
+}
 nav .navbar_top {
   background-color: #0282F9;
   padding: 5px 0;
@@ -10076,6 +10079,47 @@ nav .navbar_bottom .container .navbar_bottom_right {
   min-width: 20%;
   justify-content: flex-end;
   align-items: center;
+}
+
+main .comics-graphics {
+  margin-top: 60px;
+  padding: 70px 0;
+  background-color: #1C1C1C;
+  justify-content: center;
+  position: relative;
+}
+main .comics-graphics .comics-graphics-title {
+  position: absolute;
+  transform: translate(-90%, -165%);
+  padding: 5px;
+  color: white;
+  background-color: #0282F9;
+}
+main .comics-graphics .comics-graphics-title h1 {
+  font-weight: 700;
+}
+main .comics-graphics .comics-card-container {
+  margin: 0 10px;
+}
+main .comics-graphics .comics-card-container .comics-card {
+  position: relative;
+}
+main .comics-graphics .comics-card-container .comics-card .comic_type {
+  position: absolute;
+  padding: 3px;
+  background-color: #0282F9;
+}
+main .comics-graphics .comics-card-container .comics-card .comic_type h5 {
+  margin: 0;
+}
+main .comics-graphics .comics-card-container .comics-card img {
+  margin-bottom: 10px;
+}
+main .comics-graphics .comics-card-container .comics-card #available_comics {
+  color: #0282F9;
+}
+main .comics-graphics .comics-card-container .comics-card h5 {
+  color: white;
 }
 
 /* FOOTER */

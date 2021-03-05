@@ -10082,6 +10082,7 @@ nav .navbar_bottom .container .navbar_bottom_right {
 }
 
 main .comics-graphics {
+  width: 100%;
   margin-top: 60px;
   padding: 70px 0;
   background-color: #1C1C1C;
@@ -10120,6 +10121,30 @@ main .comics-graphics .comics-card-container .comics-card #available_comics {
 }
 main .comics-graphics .comics-card-container .comics-card h5 {
   color: white;
+}
+main .single-product .cover_jumbotron {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+main .single-product .cover_image .cover_image_footer {
+  height: 100px;
+  background-color: #0282F9;
+}
+main .single-product .cover_image .cover_image_footer img {
+  height: 400px;
+  position: absolute;
+  transform: translateY(-85%);
+  border: 1px solid white;
+}
+main .single-product .single_comic_info {
+  margin-top: 70px;
+}
+main .single-product .single_comic_info h1 {
+  font-weight: 700;
 }
 
 /* FOOTER */

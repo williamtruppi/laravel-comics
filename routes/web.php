@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'GuestController@index')->name('index');
+Route::get('comics/{comic}', 'GuestController@show')->name('guest.show');
 
 Auth::routes();
 

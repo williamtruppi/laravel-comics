@@ -12,4 +12,15 @@ class GuestController extends Controller
         $comics = Comic::all();
         return view('guest.index', compact("comics"));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Comic  $comic
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Comic $comic)
+    {
+        return view('guest.show', compact('comic'));
+    }
 }

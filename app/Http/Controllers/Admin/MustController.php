@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Must;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class MustController extends Controller
@@ -37,7 +39,32 @@ class MustController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+        $request['slug'] = Str::slug($request->title);
+
+        //dd($slug);
+
+        $validateData = $request->validate([
+            'title' => 'required|unique:comics|max:255',
+            'subtitle' => 'required',
+            'content' => 'required',
+            'slug' => 'required',
+            'img' => 'nullable',
+        ]);
+
+        $img = Storage::put('musts_images', $request->img);
+        $validateData['img'] = $img;
+
+        //dd($validateData);
+        
+        Must::create($validateData);
+
+        $new_must = Must::orderBy("id", "desc")->first();
+       
+        //dd($new_comic);
+
+        return redirect()->route("admin.musts.index", $new_must);
     }
 
     /**

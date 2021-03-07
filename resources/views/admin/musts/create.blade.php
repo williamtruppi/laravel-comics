@@ -36,7 +36,7 @@
 
         {{-- CONTENT --}}
         <div class="form-group">
-            <label for="content">Description</label>
+            <label for="content">Content</label>
             <textarea class="form-control" name="content" id="content" rows="3">{{old('content')}}</textarea>
         </div>
         @error('content')

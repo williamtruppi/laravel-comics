@@ -17,6 +17,7 @@ class CreateMustsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
+            $table->string('slug');
             $table->text('content');
             $table->string('img');
             $table->timestamps();

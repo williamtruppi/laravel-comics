@@ -23,7 +23,7 @@
 
                     <td>
                         <a href="{{route('admin.musts.show', ['must' => $must->slug])}}" class="btn btn-primary"><i class="fas fa-eye fa-xs fa-fw"></i></a>
-                        <a href="{{-- {{route('admin.musts.edit', ['must' => $must->slug])}} --}}" class="btn btn-warning"><i class="fas fa-pencil-ruler fa-xs fa-fw"></i></a>
+                        <a href="{{route('admin.musts.edit', ['must' => $must->slug])}}" class="btn btn-warning"><i class="fas fa-pencil-ruler fa-xs fa-fw"></i></a>
                         <!-- Modal -->
                         <!-- Button trigger modal -->
                         <a class="btn btn-danger" data-toggle="modal" data-target="#delete-{{ $must->slug }}"

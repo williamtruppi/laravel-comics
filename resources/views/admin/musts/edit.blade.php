@@ -12,121 +12,46 @@
         </div>
     @endif
 
-    <h1>INSERT COMIC</h1>
-    <form action="{{route('admin.comics.update', ['comic'=> $comic->slug])}}" method="post" enctype="multipart/form-data">
+    <h1>INSERT a MUST READ</h1>
+    <form action="{{-- {{route('admin.musts.update', ['must'=> $must->slug])}} --}}" method="post" enctype="multipart/form-data">
         @csrf
 
         @method("PUT") <!-- passiamo PUT poichè il metodo più indicato per EDIT -->
-
         {{-- TITLE --}}
         <div class="form-group">
             <label for="title">Title</label>
-            <input class="form-control" type="text" name="title" id="title" value="{{$comic->title}}">
+            <input class="form-control" type="text" name="title" id="title" value="{{$must->title}}">
         </div>
         @error('title')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        {{-- AVAILABLE --}}
+        {{-- SUBTITLE --}}
         <div class="form-group">
-            <label for="available">Available:</label>
-            <input type="radio" class="form-control" id="available" name="available" value="1"> <span>TRUE</span> 
-            <input type="radio" class="form-control" id="available" name="available" value="0"> <span>FALSE</span> 
+            <label for="subtitle">Subtitle</label>
+            <input class="form-control" type="text" name="subtitle" id="subtitle" value="{{$must->subtitle}}">
         </div>
-        @error('available')
+        @error('subtitle')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        {{-- DESCRIPTION --}}
+        {{-- CONTENT --}}
         <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" name="description" id="description" rows="3">{{$comic->description}}</textarea>
+            <label for="content">Content</label>
+            <textarea class="form-control" name="content" id="content" rows="3">{{$must->content}}</textarea>
         </div>
-        @error('description')
+        @error('content')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        {{-- PRICE --}}
+        {{-- IMG COVER --}}
         <div class="form-group">
-            <label for="price">PRICE</label>
-            <input class="form-control" type="number" name="price" id="price" value="{{$comic->price}}">
+          <label for="img">Cover Image</label>
+          <img src="{{asset('storage/' . $must->img)}}" alt="">
+          <input type="file" class="form-control-file" name="img" id="img" placeholder="" aria-describedby="fileHelpId">
+          <small id="fileHelpId" class="form-text text-muted">Add cover image for the current MUST READ</small>
         </div>
-        @error('price')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        {{-- SERIES --}}
-        <div class="form-group">
-            <label for="series">Series</label>
-            <input class="form-control" type="text" name="series" id="series" value="{{$comic->series}}">
-        </div>
-        @error('series')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        {{-- VOLUME --}}
-        <div class="form-group">
-            <label for="volume">Volume</label>
-            <input class="form-control" type="text" name="volume" id="volume" value="{{$comic->volume}}">
-        </div>
-        @error('volume')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        {{-- PAGE COUNT --}}
-        <div class="form-group">
-            <label for="page_count">Page Count</label>
-            <input class="form-control" type="number" name="page_count" id="page_count" value="{{$comic->page_count}}">
-        </div>
-        @error('page_count')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        {{-- RATED --}}
-        <div class="form-group">
-            <label for="rated">Rated</label>
-            <input class="form-control" type="text" name="rated" id="rated" value="{{$comic->rated}}">
-        </div>
-        @error('rated')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        <div class="form-group">
-          <img src="{{asset('storage/' . $comic->img_cover)}}" alt="">
-          <label for="img_cover">Cover Image</label>
-          <input type="file" class="form-control-file" name="img_cover" id="img_cover" placeholder="" aria-describedby="fileHelpId">
-          <small id="fileHelpId" class="form-text text-muted">Add cover image for the current COMIC</small>
-        </div>
-
-        <br>
-        <span>Choose the Writers: </span>
-        <div class="form-group">
-          <label for="writers"></label>
-          <select class="form-control" name="writers[]" id="writers" multiple>
-                @foreach ($writers as $writer)
-                    <option value="{{$writer->id}}" {{$comic->writers->contains($writer) ? 'selected' : ''}}>{{$writer->name}} {{$writer->lastname}}</option>
-                @endforeach
-          </select>
-        </div>
-        @error('writers')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        <br>
-        <span>Choose the Artists: </span>
-        <div class="form-group">
-          <label for="artists"></label>
-          <select class="form-control" name="artists[]" id="artists" multiple>
-                @foreach ($artists as $artist)
-                    <option value="{{$artist->id}}" {{$comic->artists->contains($artist) ? 'selected' : ''}}>{{$artist->name}} {{$artist->lastname}}</option>
-                @endforeach
-          </select>
-        </div>
-        @error('artists')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
        
-
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

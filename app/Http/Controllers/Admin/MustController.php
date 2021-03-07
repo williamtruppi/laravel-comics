@@ -86,7 +86,7 @@ class MustController extends Controller
      */
     public function edit(Must $must)
     {
-        //
+        return view('admin.musts.edit', compact('must'));
     }
 
     /**

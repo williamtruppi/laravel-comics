@@ -83,8 +83,8 @@
                     <ul class="list-unstyled">
                         <li><a href="{{ route('admin.index')}}"><i class="fas fa-tachometer-alt    "></i> Dashboard</a></li>
                         <li><a href="{{ route('admin.comics.index')}}"><i class="fas fa-book-open    "></i> Comics</a></li>
-                        <li><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i> Artists</a></li>
-                        <li><a href="#"><i class="fas fa-tag fa-lg fa-fw"></i> Writers</a></li>
+                        <li><a href="{{ route('admin.musts.index')}}"><i class="fa fa-folder-open" aria-hidden="true"></i> Musts</a></li>
+                        <li><a href="#"><i class="fas fa-tag fa-lg fa-fw"></i> Series</a></li>
                     </ul>
                 </div>
             <main class="col-xs-12 col-md-9 col-lg-10">

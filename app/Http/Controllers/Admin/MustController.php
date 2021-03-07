@@ -124,6 +124,7 @@ class MustController extends Controller
      */
     public function destroy(Must $must)
     {
-        //
+        $must->delete();
+        return redirect()->route('admin.musts.index');
     }
 }

@@ -10020,13 +10020,16 @@ h3 {
   display: flex;
 }
 
+body {
+  background-color: white;
+}
+
 /* navbar */
 nav {
   border-bottom: 1px solid black;
 }
 nav .navbar_top {
   background-color: #0282F9;
-  padding: 5px 0;
   justify-content: flex-end;
   align-items: center;
 }
@@ -10035,10 +10038,16 @@ nav .navbar_top ul {
   margin-bottom: 0;
 }
 nav .navbar_top ul li {
-  min-width: 150px;
+  min-width: 160px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
 }
-nav .navbar_top ul li > #dc-navbar {
+nav .navbar_top ul li:hover {
+  background-color: #3797F6;
+}
+nav .navbar_top ul #dc-navbar {
   background-color: white;
 }
 nav .navbar_top ul a {
@@ -10048,14 +10057,11 @@ nav .navbar_top ul a {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: white;
   margin-left: 5px;
-}
-nav .navbar_bottom {
-  padding: 20px 0;
 }
 nav .navbar_bottom .container .navbar_bottom_left {
   min-width: 10%;
+  align-items: center;
 }
 nav .navbar_bottom .container .navbar_bottom_left img {
   height: 70px;
@@ -10063,18 +10069,44 @@ nav .navbar_bottom .container .navbar_bottom_left img {
 nav .navbar_bottom .container .navbar_bottom_center {
   font-size: 1.2rem;
   min-width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 40px 0 0 0;
   justify-content: center;
-  align-items: center;
 }
 nav .navbar_bottom .container .navbar_bottom_center ul {
   list-style: none;
   margin-bottom: 0;
+  align-items: center;
+}
+nav .navbar_bottom .container .navbar_bottom_center ul li {
+  position: relative;
+  margin: 0 15px;
+  padding-bottom: 40px;
+}
+nav .navbar_bottom .container .navbar_bottom_center ul li:hover:after {
+  background-color: #0282F9;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  position: absolute;
+  /* -webkit-transform:scaleY(0); */
+  /* transform:scaleY(0); */
+  /* -webkit-transform-origin:bottom; */
+  transform-origin: bottom;
+  transition-duration: 0.3s;
+  /* transition-property:-webkit-transform; */
+  /* transition-property:transform; */
+  /* transition-property:transform,-webkit-transform; */
+  transition-timing-function: ease-in-out;
+  width: 100%;
 }
 nav .navbar_bottom .container .navbar_bottom_center ul a {
   color: black;
   font-weight: 700;
   text-decoration: none;
-  padding: 0 15px;
 }
 nav .navbar_bottom .container .navbar_bottom_right {
   min-width: 20%;

@@ -10092,15 +10092,8 @@ nav .navbar_bottom .container .navbar_bottom_center ul li:hover:after {
   display: block;
   height: 5px;
   position: absolute;
-  /* -webkit-transform:scaleY(0); */
-  /* transform:scaleY(0); */
-  /* -webkit-transform-origin:bottom; */
   transform-origin: bottom;
-  transition-duration: 0.3s;
-  /* transition-property:-webkit-transform; */
-  /* transition-property:transform; */
-  /* transition-property:transform,-webkit-transform; */
-  transition-timing-function: ease-in-out;
+  transition-duration: 1;
   width: 100%;
 }
 nav .navbar_bottom .container .navbar_bottom_center ul a {
@@ -10108,10 +10101,29 @@ nav .navbar_bottom .container .navbar_bottom_center ul a {
   font-weight: 700;
   text-decoration: none;
 }
+nav .navbar_bottom .container .navbar_bottom_center ul li:hover a {
+  color: #0282F9;
+}
 nav .navbar_bottom .container .navbar_bottom_right {
   min-width: 20%;
   justify-content: flex-end;
   align-items: center;
+}
+nav .navbar_bottom .container .navbar_bottom_right input {
+  border: none;
+  margin-right: 5px;
+}
+nav .navbar_bottom .container .navbar_bottom_right input:focus {
+  border: none;
+  outline: none;
+}
+nav .navbar_bottom .container .navbar_bottom_right .input_nav_field {
+  border-bottom: 3px solid #0282F9;
+}
+nav .navbar_bottom .container .navbar_bottom_right input[type=text]::-webkit-input-placeholder {
+  font-weight: 700;
+  color: black;
+  font-size: 19px;
 }
 
 main .comics-graphics {
@@ -10238,17 +10250,33 @@ footer .footer-center {
   background-size: cover;
 }
 footer .footer-center .container {
-  padding: 10px 0;
+  height: 100%;
 }
 footer .footer-center .container .footer-center-left {
   width: 50%;
+  color: white;
+}
+footer .footer-center .container .footer-center-left div {
+  margin-right: 30px;
+}
+footer .footer-center .container .footer-center-left ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+footer .footer-center .container .footer-center-left a {
+  text-decoration: none;
+  color: #959595;
+}
+footer .footer-center .container .footer-center-left a:hover {
+  color: #0282F9;
 }
 footer .footer-center .container .footer-center-right {
   width: 50%;
+  min-height: 100%;
   background-position: center;
   background-position: right;
-  background-size: 80%;
   background-repeat: no-repeat;
+  background-size: 80%;
 }
 footer .footer-bottom {
   background-color: #232323;

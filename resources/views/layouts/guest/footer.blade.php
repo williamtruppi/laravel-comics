@@ -21,25 +21,48 @@
                 <div class="container d-flex">
 
                     {{-- apertura footer-center-left --}}
-                    <div class="footer-center-left">
-                        <div class="block-inner">
-                            <h2 class="block-title">DC Comics</h2>
-                        <div class="content clearfix">
-                                <ul class="menu">
-                                    <li class="first leaf menu-21186 characters mid-21186"><a href="/characters">Characters</a></li>
-                                    <li class="leaf active-trail menu-21191 comics mid-21191"><a href="/comics" class="active-trail active">Comics</a></li>
-                                    <li class="leaf menu-21196 movies mid-21196"><a href="/movies">Movies</a></li>
-                                    <li class="leaf menu-21201 tv mid-21201"><a href="/tv">TV</a></li>
-                                    <li class="leaf menu-21206 games mid-21206"><a href="/games">Games</a></li>
-                                    <li class="leaf menu-14591 videos mid-14591"><a href="/videos">Videos</a></li>
-                                    <li class="leaf menu-14603 news mid-14603"><a href="/news">News</a></li>
-                                    <li class="last expanded menu-3472947 shop mid-3472947"><a href="http://www.shopdcentertainment.com/category/dcshop_brands/dc+comics.do?ref=DCHEADER">Shop</a>
-                                        <ul class="menu"><li class="first leaf menu-3472949 shop-dc mid-3472949"><a href="https://www.shopdcentertainment.com/">Shop DC</a></li>
-                                            <li class="last leaf menu-3472948 shop-dc-collectibles mid-3472948"><a href="https://www.shopdcentertainment.com/collections/dcc-all-dc-collectibles">Shop DC Collectibles</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>    
-                            </div>
+                    <div class="footer-center-left d-flex">
+                        <div class="dc-comics-footer">
+                            <h4>DC COMICS</h4>
+
+                            <ul>
+                                <li><a href="#">Characters</a></li>
+                                <li><a href="#">Comics</a></li>
+                                <li><a href="#">Movies</a></li>
+                                <li><a href="#">Tv</a></li>
+                                <li><a href="#">Games</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">DC Shop</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dc-footer">
+                            <h4>DC</h4>
+
+                            <ul>
+                                <li><a href="#">Terms Of Use                                </a></li>
+                                <li><a href="#">Privacy Policy (New)</a></li>
+                                <li><a href="#">Advertising</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Subscriptions</a></li>
+                                <li><a href="#">CPSC Certificates</a></li>
+                                <li><a href="#">Ratings</a></li>
+                                <li><a href="#">Shop Help</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dc-comics-footer">
+                            <h4>SITES</h4>
+
+                            <ul>
+                                <li><a href="#">DC</a></li>
+                                <li><a href="#">DC UNIVERSE INFINITE</a></li>
+                                <li><a href="#">DC Kids</a></li>
+                                <li><a href="#">DC Shop</a></li>
+                                <li><a href="#">MAD Magazine</a></li>
+                            </ul>
                         </div>
                     </div>
                     {{-- chiusura footer-center-left --}}

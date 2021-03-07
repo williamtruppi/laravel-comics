@@ -106,15 +106,8 @@ nav{
                         display:block;
                         height:5px;
                         position:absolute;
-                        /* -webkit-transform:scaleY(0); */
-                        /* transform:scaleY(0); */
-                        /* -webkit-transform-origin:bottom; */
-                        transform-origin:bottom;
-                        transition-duration:.3s;
-                        /* transition-property:-webkit-transform; */
-                        /* transition-property:transform; */
-                        /* transition-property:transform,-webkit-transform; */
-                        transition-timing-function:ease-in-out;
+                        transform-origin: bottom;
+                        transition-duration: 1;
                         width:100%;
                     }
                 
@@ -123,6 +116,10 @@ nav{
                         font-weight: 700;
                         text-decoration: none;
                     }
+
+                    li:hover a{
+                        color: #0282F9;
+                    }
                 }
             }
 
@@ -130,6 +127,26 @@ nav{
                 min-width: 20%;
                 justify-content: flex-end;
                 align-items: center;
+
+                input{
+                    border: none;
+                    margin-right: 5px;
+
+                    &:focus{
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+                .input_nav_field{
+                    border-bottom: 3px solid $DCBlue;
+                }
+
+                input[type="text"]::-webkit-input-placeholder {
+                    font-weight: 700;
+                    color: black;
+                    font-size: 19px;
+                }
             }
         }
     }
@@ -282,17 +299,39 @@ footer{
         background-size: cover;
 
         .container{
-            padding: 10px 0;
+            height: 100%;
+            
 
             .footer-center-left{
                 width: 50%;
+                color: white;
+
+                div{
+                    margin-right: 30px;
+                }
+
+                ul{
+                    list-style: none;
+                    margin-bottom: 0;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #959595;
+
+                    &:hover{
+                        color: $DCBlue;
+                    }
+                }
             }
+
             .footer-center-right{
                 width: 50%;
+                min-height: 100%;
                 background-position: center;
                 background-position: right;
-                background-size: 80%;
                 background-repeat: no-repeat;
+                background-size: 80%;
             }
         }
 

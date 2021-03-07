@@ -43,7 +43,9 @@
 
                 {{-- apertura navbar_bottom_right --}}
                 <div class="navbar_bottom_right d-flex">
-                    <input type="text">
+                    <div class="input_nav_field">
+                        <input type="text" placeholder="Search" class="text-right"><i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
                 </div>
                 {{-- apertura navbar_bottom_right --}}
 

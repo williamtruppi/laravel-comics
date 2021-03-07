@@ -22,7 +22,7 @@
                     <td>{{ $must->slug }}</td>
 
                     <td>
-                        <a href="{{-- {{route('admin.musts.show', ['must' => $must->slug])}} --}}" class="btn btn-primary"><i class="fas fa-eye fa-xs fa-fw"></i></a>
+                        <a href="{{route('admin.musts.show', ['must' => $must->slug])}}" class="btn btn-primary"><i class="fas fa-eye fa-xs fa-fw"></i></a>
                         <a href="{{-- {{route('admin.musts.edit', ['must' => $must->slug])}} --}}" class="btn btn-warning"><i class="fas fa-pencil-ruler fa-xs fa-fw"></i></a>
                         <!-- Modal -->
                         <!-- Button trigger modal -->

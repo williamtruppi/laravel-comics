@@ -2,7 +2,7 @@
 
 @section('content')
         <h1>All Must Read for the Admin</h1>
-        <a name="" id="" class="btn btn-primary" href="{{-- {{route('admin.musts.create')}} --}}" role="button">INSERT A NEW MUST READ</a>
+        <a name="" id="" class="btn btn-primary" href="{{route('admin.musts.create')}}" role="button">INSERT A NEW MUST READ</a>
         <table class="table">
             <thead>
                 <tr>

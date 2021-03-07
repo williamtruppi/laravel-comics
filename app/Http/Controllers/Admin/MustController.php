@@ -46,7 +46,7 @@ class MustController extends Controller
         //dd($slug);
 
         $validateData = $request->validate([
-            'title' => 'required|unique:comics|max:255',
+            'title' => 'required|unique:musts|max:255',
             'subtitle' => 'required',
             'content' => 'required',
             'slug' => 'required',
@@ -98,7 +98,22 @@ class MustController extends Controller
      */
     public function update(Request $request, Must $must)
     {
-        //
+        $request['slug'] = Str::slug($request->title);
+
+        $validateData = $request->validate([
+            'title' => 'required|unique:musts,id|max:255',
+            'subtitle' => 'required',
+            'content' => 'required',
+            'slug' => 'required',
+            'img' => 'nullable',
+        ]);
+
+        $img = Storage::put('musts_images', $request->img);
+        $validateData['img'] = $img;
+
+        $must->update($validateData);
+
+        return redirect()->route('admin.musts.index');
     }
 
     /**

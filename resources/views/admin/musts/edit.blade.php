@@ -13,7 +13,7 @@
     @endif
 
     <h1>INSERT a MUST READ</h1>
-    <form action="{{-- {{route('admin.musts.update', ['must'=> $must->slug])}} --}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('admin.musts.update', ['must'=> $must->slug])}}" method="post" enctype="multipart/form-data">
         @csrf
 
         @method("PUT") <!-- passiamo PUT poichè il metodo più indicato per EDIT -->

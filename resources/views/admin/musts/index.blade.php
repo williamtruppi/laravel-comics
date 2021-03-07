@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Nooooo</button>
-                                        <form action="{{-- {{ route('admin.must.destroy', ['must' => $must->slug]) }} --}}"
+                                        <form action="{{ route('admin.musts.destroy', ['must' => $must->slug]) }}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comic;
+use App\Must;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -10,7 +11,8 @@ class GuestController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view('guest.index', compact("comics"));
+        $musts = Must::all();
+        return view('guest.index', compact("comics", "musts"));
     }
 
     /**

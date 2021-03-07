@@ -10167,6 +10167,21 @@ main .comics-graphics .comics-card-container .comics-card #available_comics {
 main .comics-graphics .comics-card-container .comics-card h5 {
   color: white;
 }
+main .must_reads {
+  padding: 50px 0;
+}
+main .must_reads h1 {
+  color: #0282F9;
+  margin-left: 20%;
+  margin-bottom: 3%;
+  font-weight: 700;
+}
+main .must_reads .must_reads_wrapper img {
+  width: 80%;
+}
+main .must_reads .must_reads_wrapper #subtitle_must {
+  color: #0282F9;
+}
 main .single-product .cover_jumbotron {
   width: 100%;
   height: 500px;

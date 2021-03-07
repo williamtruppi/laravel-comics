@@ -192,6 +192,26 @@ main{
         }
     }
 
+    .must_reads{
+        padding: 50px 0;
+
+        h1{
+            color: $DCBlue;
+            margin-left: 20%;
+            margin-bottom: 3%;
+            font-weight: 700;
+        }
+
+        .must_reads_wrapper{
+
+            img{
+                width: 80%;
+            }
+
+            #subtitle_must{color: $DCBlue;}
+        }
+    }
+
     .single-product{
         .cover_jumbotron{
             width: 100%;

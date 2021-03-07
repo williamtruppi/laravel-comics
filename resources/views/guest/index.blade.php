@@ -26,6 +26,25 @@
         @endforeach
     </section>
     
+
+    <section class="must_reads">
+        <h1>MUST READS</h1>
+        <div class="must_reads_wrapper">
+            <div class="container d-flex">
+                @foreach ($musts as $must)
+                <div class="single_must">
+                    <a href="{{-- {{route('guest.show', ['must' => $must->slug])}} --}}">
+                        <img src="{{asset('storage/' . $must->img)}}" alt="">
+                    </a>
+                    <h5 id="subtitle_must"><strong>{{$must->subtitle}}</strong></h5>
+                    <h5><strong>{{$must->title}}</strong></h5>
+                    <p>{{$must->content}}</p>
+                </div>
+            @endforeach
+            </div>
+        </div>
+    </section>
+
 @endsection
         
          

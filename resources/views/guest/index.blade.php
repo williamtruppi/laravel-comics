@@ -45,6 +45,25 @@
         </div>
     </section>
 
+    <section class="comics-graphics d-flex" id="series-list">
+        <div class="comics-graphics-title" id="series-list-title">
+            <h1>CURRENT SERIES</h1>
+        </div>
+        <div class="series-list-wrapper d-flex">
+            @foreach ($series as $serie)
+            <div class="comics-card-container d-flex" id="series-card-container">
+                <div class="comics-card" id="serie-card">
+
+                    <a href="{{-- {{route('guest.show', ['serie' => $comic->slug])}} --}}">
+                        <img src="{{asset('storage/' . $serie->img)}}" alt="">
+                    </a>
+                    <h5><small>{{$serie->title}}</small></h5>
+                </div>
+            </div>
+        @endforeach
+        </div>
+    </section>
+
 @endsection
         
          

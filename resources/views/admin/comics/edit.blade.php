@@ -91,12 +91,21 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
+        {{-- cover image --}}
         <div class="form-group">
           <img src="{{asset('storage/' . $comic->img_cover)}}" alt="">
           <label for="img_cover">Cover Image</label>
           <input type="file" class="form-control-file" name="img_cover" id="img_cover" placeholder="" aria-describedby="fileHelpId">
           <small id="fileHelpId" class="form-text text-muted">Add cover image for the current COMIC</small>
         </div>
+
+        {{-- jumbo image --}}
+        <div class="form-group">
+            <img src="{{asset('storage/' . $comic->jumbocover)}}" alt="">
+            <label for="jumbocover">JUMBO Image</label>
+            <input type="file" class="form-control-file" name="jumbocover" id="jumbocover" placeholder="" aria-describedby="fileHelpId">
+            <small id="fileHelpId" class="form-text text-muted">Add jumbocover for the current COMIC</small>
+          </div>
 
         <br>
         <span>Choose the Writers: </span>

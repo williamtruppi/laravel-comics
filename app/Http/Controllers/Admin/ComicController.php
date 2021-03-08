@@ -53,6 +53,7 @@ class ComicController extends Controller
             'title' => 'required|unique:comics|max:255',
             'slug' => 'required',
             'img_cover' => 'nullable',
+            'jumbocover' => 'nullable',
             'available' => 'required',
             'description' => 'required',
             'price' => 'required | numeric',
@@ -66,6 +67,9 @@ class ComicController extends Controller
 
         $img_cover = Storage::put('cover_images', $request->img_cover);
         $validateData['img_cover'] = $img_cover;
+
+        $jumbocover = Storage::put('jumbo_images', $request->jumbocover);
+        $validateData['jumbocover'] = $jumbocover;
 
         //dd($validateData);
         
@@ -122,6 +126,7 @@ class ComicController extends Controller
             'title' => 'required|unique:comics,id|max:255',
             'slug' => 'required',
             'img_cover' => 'nullable',
+            'jumbotron' => 'nullable',
             'available' => 'required',
             'description' => 'required',
             'price' => 'required | numeric',
@@ -135,6 +140,10 @@ class ComicController extends Controller
 
         $img_cover = Storage::put('cover_images', $request->img_cover);
         $validateData['img_cover'] = $img_cover;
+
+        $jumbocover = Storage::put('jumbo_images', $request->jumbocover);
+        $validateData['jumbocover'] = $jumbocover;
+
 
         $comic->update($validateData);
         $comic->writers()->sync($request->writers);

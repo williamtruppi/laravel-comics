@@ -2,7 +2,11 @@
 
 @section('content')
 
-    <img src="{{asset('storage/' . $comic->img_cover)}}" alt="">
+    <div class="images d-flex">
+        <img src="{{asset('storage/' . $comic->img_cover)}}" alt="" style="height: 250px"> Cover Image
+        <img src="{{asset('storage/' . $comic->jumbocover)}}" alt="" style="height: 250px"> JUMBO Image
+    </div>
+    
     <h1>Title: {{$comic->title}}</h1>
     <p>Description: {{$comic->description}}</p>
 

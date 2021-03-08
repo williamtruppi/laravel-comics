@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comic extends Model
 {
 
-    protected $fillable = ["title", "description", 'slug', 'img_cover', 'available', 'price', 'series', 'volume', 'page_count', 'rated'];
+    protected $fillable = ["title", "description", 'slug', 'img_cover', 'jumbocover', 'available', 'price', 'series', 'volume', 'page_count', 'rated'];
 
     public function getRouteKeyName ()
     {

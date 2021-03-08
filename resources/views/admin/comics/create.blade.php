@@ -95,6 +95,12 @@
           <small id="fileHelpId" class="form-text text-muted">Add cover image for the current COMIC</small>
         </div>
 
+        <div class="form-group">
+            <label for="jumbocover">JUMBO Image</label>
+            <input type="file" class="form-control-file" name="jumbocover" id="jumbocover" placeholder="" aria-describedby="fileHelpId">
+            <small id="fileHelpId" class="form-text text-muted">Add jumbocover for the current COMIC</small>
+          </div>
+
         <br>
         <span>Choose the Writers: </span>
         <div class="form-group">

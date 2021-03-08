@@ -4,7 +4,7 @@
     
     <section class="single-product">
 
-        <div class="cover_jumbotron" style="background-image: url({{asset('storage/cover_images/jumbo_BATMAN_Cv106.jpg')}})">
+        <div class="cover_jumbotron" style="background-image: url({{asset('storage/' .  $comic->jumbocover)}})">
         </div>
 
         <div class="cover_image">

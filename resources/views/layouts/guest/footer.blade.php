@@ -84,11 +84,11 @@
                     <a href="#" id="sign_up">SIGN-UP NOW!</a>
                     <div class="follow-footer d-flex">
                         <a href="#">FOLLOW US</a>
-                        <i class="fab fa-facebook-f d-flex"></i>
-                        <i class="fab fa-twitter d-flex"></i>
-                        <i class="fab fa-youtube d-flex"></i>
-                        <i class="fab fa-pinterest d-flex"></i>
-                        <i class="fas fa-map-marker-alt d-flex"></i>
+                        <li><i class="fab fa-facebook-f d-flex"></i></li>
+                        <li><i class="fab fa-twitter d-flex"></i></li>
+                        <li><i class="fab fa-youtube d-flex"></i></li>
+                        <li><i class="fab fa-pinterest d-flex"></i></li>
+                        <li><i class="fas fa-map-marker-alt d-flex"></i></li>
                     </div>
                 </div>
             </div>

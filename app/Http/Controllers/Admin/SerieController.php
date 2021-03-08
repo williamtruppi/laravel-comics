@@ -101,7 +101,7 @@ class SerieController extends Controller
         $validateData = $request->validate([
             'title' => 'required|unique:series,id|max:255',
             'slug' => 'required',
-            'img' => 'nullable',
+            'img' => '',
         ]);
 
         $img = Storage::put('series_images', $request->img);

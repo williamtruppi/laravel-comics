@@ -22,4 +22,12 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
     Route::get('/', 'HomeController@index')->name('index');
     Route::resource('comics', 'ComicController');
     Route::resource('musts', 'MustController');
+    Route::get('/series', 'SerieController@index')->name('series.index');
+    Route::get('/series/create', 'SerieController@create')->name('series.create');
+    Route::get('/series/{serie}', 'SerieController@show')->name('series.show');
+    Route::post('/series', 'SerieController@store')->name('series.store');
+    Route::get('/series/{serie}/edit', 'SerieController@edit')->name('series.edit');
+    Route::patch('/series/{serie}', 'SerieController@update')->name('series.update');
+    Route::put('/series/{serie}', 'SerieController@update')->name('series.update');
+    Route::delete('/series/{serie}', 'SerieController@destroy')->name('series.destroy');
 });

@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="images d-flex">
+    <div class="images d-flex align-items-center mb-4">
         <img src="{{asset('storage/' . $comic->img_cover)}}" alt="" style="height: 250px"> Cover Image
-        <img src="{{asset('storage/' . $comic->jumbocover)}}" alt="" style="height: 250px"> JUMBO Image
+        <img src="{{asset('storage/' . $comic->jumbocover)}}" alt="" style="height: 250px; margin-left: 50px"> JUMBO Image
     </div>
     
     <h1>Title: {{$comic->title}}</h1>

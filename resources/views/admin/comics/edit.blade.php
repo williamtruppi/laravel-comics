@@ -101,7 +101,7 @@
 
         {{-- jumbo image --}}
         <div class="form-group">
-            <img src="{{asset('storage/' . $comic->jumbocover)}}" alt="">
+            <img src="{{asset('storage/' . $comic->jumbocover)}}" alt="" style="height: 150px">
             <label for="jumbocover">JUMBO Image</label>
             <input type="file" class="form-control-file" name="jumbocover" id="jumbocover" placeholder="" aria-describedby="fileHelpId">
             <small id="fileHelpId" class="form-text text-muted">Add jumbocover for the current COMIC</small>

@@ -8,7 +8,7 @@
         </div>
         @foreach ($comics as $comic)
             <div class="comics-card-container">
-                <div class="comics-card">
+                <div class="comics-card animate__animated animate__pulse">
                     <div class="comic_type">
                         <h5>COMIC BOOK</h5>
                     </div>
@@ -32,13 +32,16 @@
         <div class="must_reads_wrapper">
             <div class="container d-flex">
                 @foreach ($musts as $must)
-                <div class="single_must">
+                <div class="single_must" style="margin-right: 10px">
                     <a href="{{-- {{route('guest.show', ['must' => $must->slug])}} --}}">
                         <img src="{{asset('storage/' . $must->img)}}" alt="">
                     </a>
                     <h5 id="subtitle_must"><strong>{{$must->subtitle}}</strong></h5>
                     <h5><strong>{{$must->title}}</strong></h5>
-                    <p>{{$must->content}}</p>
+                    <div style="width: 335px">
+                        <p>{{$must->content}}</p>
+                    </div>
+                    
                 </div>
             @endforeach
             </div>
@@ -52,12 +55,12 @@
         <div class="series-list-wrapper d-flex">
             @foreach ($series as $serie)
             <div class="comics-card-container d-flex" id="series-card-container">
-                <div class="comics-card" id="serie-card">
+                <div {{-- class="comics-card"  --}}id="serie-card">
 
                     <a href="{{-- {{route('guest.show', ['serie' => $comic->slug])}} --}}">
                         <img src="{{asset('storage/' . $serie->img)}}" alt="">
                     </a>
-                    <h5><small>{{$serie->title}}</small></h5>
+                    <h5 style="width: 175px"><small>{{$serie->title}}</small></h5>
                 </div>
             </div>
         @endforeach

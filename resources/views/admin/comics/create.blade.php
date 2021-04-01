@@ -27,9 +27,11 @@
 
         {{-- AVAILABLE --}}
         <div class="form-group">
-            <label for="available">Available:</label>
-            <input type="radio" class="form-control" id="available" name="available" value="1"> <span>TRUE</span> 
-            <input type="radio" class="form-control" id="available" name="available" value="0"> <span>FALSE</span> 
+            <div class="d-flex align-items-center">
+                <label for="available">Available:</label>
+                <input type="radio" class="form-control" id="available" name="available" value="1" style="width: fit-content; margin: 0 30px 0 30px"> <span>TRUE</span> 
+                <input type="radio" class="form-control" id="available" name="available" value="0" style="width: fit-content; margin: 0 30px 0 30px"> <span>FALSE</span> 
+            </div>
         </div>
         @error('available')
             <div class="alert alert-danger">{{ $message }}</div>

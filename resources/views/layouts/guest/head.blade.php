@@ -6,6 +6,9 @@
 
         <title>DC Comics | Homepage</title>
 
+        {{-- favicon --}}
+        <link rel="shortcut icon" type="image/jpg" href="Favicon_Image_Location"/>
+
         {{-- google fonts --}}
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,6 +21,9 @@
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        {{-- animate css --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     </head>
     <body>

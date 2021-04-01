@@ -101,6 +101,7 @@ nav{
                         position: relative;
                         margin: 0 15px;
                         padding-bottom: 40px;
+                        transition: transform 250ms;
                     }
 
                     li:hover:after{
@@ -111,8 +112,10 @@ nav{
                         height:5px;
                         position:absolute;
                         transform-origin: bottom;
-                        transition-duration: 1;
-                        width:100%;
+                        transition-duration: .3s;
+                        transition-property: transform,-webkit-transform;
+                        transition-timing-function: ease-in-out;
+                        width: 100%;
                     }
                 
                     a{
@@ -181,6 +184,11 @@ main{
 
             .comics-card{
                 position: relative;
+                transition: transform 250ms;
+
+                &:hover {
+                    top: -20px;
+                  }
 
                 .comic_type{
                     position: absolute;
@@ -230,12 +238,13 @@ main{
                 width: calc(100% / 6 - 20px);
 
                 #serie-card{
-                    margin: 0;
+                    margin: 0 0 10px 0;
                     padding: 0;
+                    color: white;
 
                     img{
-                        width: auto;
-                        height: 75%;
+                        width: 175px;
+                        height: 175px;
                     }
                 }
             }
@@ -369,6 +378,7 @@ footer{
                 a{
                     text-decoration: none;
                     color: #959595;
+                    
 
                     &:hover{
                         color: $DCBlue;
@@ -405,6 +415,7 @@ footer{
 
                 &:hover{
                     background-color: $DCBlue;
+                    transition-duration: 0.5s;
                 }
             }
 

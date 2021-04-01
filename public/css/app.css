@@ -10088,6 +10088,7 @@ nav .navbar_bottom .container .navbar_bottom_center ul li {
   position: relative;
   margin: 0 15px;
   padding-bottom: 40px;
+  transition: transform 250ms;
 }
 nav .navbar_bottom .container .navbar_bottom_center ul li:hover:after {
   background-color: #0282F9;
@@ -10097,7 +10098,9 @@ nav .navbar_bottom .container .navbar_bottom_center ul li:hover:after {
   height: 5px;
   position: absolute;
   transform-origin: bottom;
-  transition-duration: 1;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
   width: 100%;
 }
 nav .navbar_bottom .container .navbar_bottom_center ul a {
@@ -10153,6 +10156,10 @@ main .comics-graphics .comics-card-container {
 }
 main .comics-graphics .comics-card-container .comics-card {
   position: relative;
+  transition: transform 250ms;
+}
+main .comics-graphics .comics-card-container .comics-card:hover {
+  top: -20px;
 }
 main .comics-graphics .comics-card-container .comics-card .comic_type {
   position: absolute;
@@ -10197,12 +10204,13 @@ main #series-list .series-list-wrapper #series-card-container {
   width: calc(100% / 6 - 20px);
 }
 main #series-list .series-list-wrapper #series-card-container #serie-card {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
+  color: white;
 }
 main #series-list .series-list-wrapper #series-card-container #serie-card img {
-  width: auto;
-  height: 75%;
+  width: 175px;
+  height: 175px;
 }
 main .single-product .cover_jumbotron {
   width: 100%;
@@ -10332,6 +10340,7 @@ footer .footer-bottom .container #sign_up {
 }
 footer .footer-bottom .container #sign_up:hover {
   background-color: #0282F9;
+  transition-duration: 0.5s;
 }
 footer .footer-bottom .container a {
   height: -webkit-fit-content;
